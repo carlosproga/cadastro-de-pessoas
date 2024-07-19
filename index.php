@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cadastro de Pessoas</title>
+
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -45,21 +47,19 @@
         background-color: #45a049;
     }
 </style>
+
 </head>
+
 <body>
     <form action="cadastro.php" method="post">
+
         <h2>Cadastro de Pessoas</h2>
+
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="idade">Idade:</label>
-        <input type="text" id="idade" name="idade" required>
-
-        <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade">
+        <label for="endereço">Endereço:</label>
+        <input type="text" id="endereço" name="endereço" required>
 
         <label for="estado">Estado:</label>
         <select id="estado" name="estado">
@@ -92,7 +92,25 @@
             <option value="TO">Tocantins</option>
         </select>
 
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade">
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Data de Nascimento">Data de Nascimento:</label>
+        <input type="text" id="data de nascimento" name="data de nascimento" required>
+
+        <label for="CPF">CPF:</label>
+        <input type="text" id="cidade" name="cidade">
+
+        
+
         <input type="submit" value="Cadastrar">
+        <input class="btn btn-danger" type="reset">
     </form>
 </body>
 </html>
