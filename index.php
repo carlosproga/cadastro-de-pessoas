@@ -1,3 +1,10 @@
+<?php
+    if(isset($_post["bt_nome"])){
+        echo "teste_deu certo";
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,6 +14,20 @@
 <title>Cadastro de Pessoas</title>
 
 <style>
+
+.voltar-btn {
+        background-color: RED;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        border: NONE;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
     body {
         font-family: Arial, sans-serif;
         padding: 20px;
@@ -56,13 +77,13 @@
         <h2>Cadastro de Pessoas</h2>
 
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input class="form-control" type="text" name="bt_nome" required>
 
         <label for="endereço">Endereço:</label>
-        <input type="text" id="endereço" name="endereço" required>
+        <input class="form-control" type="text" name="endereço" required>
 
         <label for="estado">Estado:</label>
-        <select id="estado" name="estado">
+        <select class="form-control" name="estado">
             <option value="AC">Acre</option>
             <option value="AL">Alagoas</option>
             <option value="AP">Amapá</option>
@@ -93,24 +114,66 @@
         </select>
 
         <label for="cidade">Cidade:</label>
-        <input type="text" id="cidade" name="cidade">
+        <input class="form-control" type="text" name="cidade">
 
         <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="">
+        <input class="form-control" type="text" name="">
 
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input class="form-control" type="email" name="email" required>
 
         <label for="Data de Nascimento">Data de Nascimento:</label>
-        <input type="text" id="data de nascimento" name="data de nascimento" required>
+        <input class="form-control" type="text" name="data de nascimento" required>
 
-        <label for="CPF">CPF:</label>
-        <input type="text" id="cidade" name="cidade">
+        <div class="dob-container">
+        <label for="dia">Dia:</label>
+        <input type="number" id="dia" name="dia" min="1" max="31" required>
 
+        <br>
+        <br>
+
+        <label for="mes">Mês:</label>
+        <select id="mes" name="mes" required>
+            <option value="">-- Selecione --</option>
+            <option value="1">Janeiro</option>
+            <option value="2">Fevereiro</option>
+            <option value="3">Março</option>
+            <option value="4">Abril</option>
+            <option value="5">Maio</option>
+            <option value="6">Junho</option>
+            <option value="7">Julho</option>
+            <option value="8">Agosto</option>
+            <option value="9">Setembro</option>
+            <option value="10">Outubro</option>
+            <option value="11">Novembro</option>
+            <option value="12">Dezembro</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label for="ano">Ano:</label>
+        <input type="number" id="ano" name="ano" min="1900" max="2024" required>
+    
+        <br>
+        <br>
         
+        <label for="CPF">CPF:</label>
+        <input class="form-control" type="text" name="CPF">
 
-        <input type="submit" value="Cadastrar">
-        <input class="btn btn-danger" type="reset">
+        <BR><label for="senha">Senha:</label></BR>
+        <input class="form-control" type="password" name="CPF">
+
+            <div class="mb-3">
+                <BR><label for="">Repetir Senha:</label></BR>
+                <input class="form-control" type="password">
+            </div>
+
+        <BR></BR>
+
+        <input class="btn btn-success" type="submit" value="Cadastrar">
+        <a href="#" class="voltar-btn">Voltar</a>
+
     </form>
 </body>
 </html>
